@@ -1,16 +1,32 @@
-## Hi there 👋
+```swift
+//
+//  AleMohamad.swift
+//  GitHub
+//
 
-<!--
-**alemohamad/alemohamad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+struct AleMohamad: AppleDeveloper {
+    let name: String = "Alejandro Mohamad"
+    let mainLanguage: ProgrammingLanguage = .swift
+    let tools: [String] = ["Xcode", "Swift Playgrounds"]
+    let platforms: [Platform] = [.iOS, .iPadOS, .macOS, .tvOS, .watchOS, .visionOS]
+    let backendFrameworks: [String] = ["Vapor"]
+    
+    var website: String {
+        "https://alemohamad.com"
+    }
+    
+    var bento: String {
+        "https://bento.me/alemohamad"
+    }
+    
+    func developApp(for platform: Platform) -> String {
+        "🚀 Coding an app for \(platform.name)..."
+    }
+    
+    func buildBackend(using framework: String) -> String {
+        backendFrameworks.contains(framework) ?
+            "⚙️ Backend API using \(framework)..." :
+            "❌ Framework \(framework) is not in my toolbox!"
+    }
+}
+```
